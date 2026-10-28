@@ -21,3 +21,11 @@ output "account_id" {
 output "benutzer_arn" {
   value = data.aws_caller_identity.aktuell.arn
 }
+
+variable "vorname" {
+  type = string
+}
+
+output "gruss" {
+  value = "Hallo ${var.vorname}!"
+}
